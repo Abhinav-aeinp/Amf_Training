@@ -1,0 +1,14 @@
+Bundle-Name: registration-api
+Bundle-SymbolicName: com.liferay.training.amf.registration.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.liferay.training.amf.registration.exception,\
+	com.liferay.training.amf.registration.model,\
+	com.liferay.training.amf.registration.service,\
+	com.liferay.training.amf.registration.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../registration-service/service.xml
+-jsp: *.jsp,*.jspf
+-plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+-plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
+-sources: true

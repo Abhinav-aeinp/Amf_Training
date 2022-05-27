@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.training.amf.admin.monitor.model.StoreEvents">
+		<field name="uuid" type="String" />
+		<field name="eventId" type="long" />
+		<field name="logged" type="Date" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="requestIp" type="String" />
+		<field name="eventType" type="String" />
+	</model>
+</model-hints>

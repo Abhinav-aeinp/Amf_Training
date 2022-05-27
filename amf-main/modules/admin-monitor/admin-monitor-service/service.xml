@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.liferay.training.amf.admin.monitor">
+	<namespace>StoreEvents</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="StoreEvents" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="eventId" primary="true" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="logged" type="Date" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="requestIp" type="String" />
+		<column name="eventType" type="String" />
+
+		<!-- Order -->
+
+		<order by="desc">
+			<order-column name="logged" />
+		</order>
+		
+		<finder name="EventType" return-type="Collection">
+			<finder-column name="eventType"></finder-column>
+		</finder>
+		
+		<finder name="User" return-type="Collection">
+			<finder-column name="userId"></finder-column>
+		</finder>
+		
+		<finder return-type="Collection" name="UserAndEventType">
+			<finder-column name="eventType"></finder-column>
+			<finder-column name="userId"></finder-column>
+		</finder>
+		
+		<reference entity="Counter" package-path="com.liferay.counter"></reference>
+	</entity>
+</service-builder>

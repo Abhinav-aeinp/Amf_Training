@@ -1,0 +1,1 @@
+create unique index IX_ED57DFB on Registration_Registration (uuid_[$COLUMN_LENGTH:75$], groupId);

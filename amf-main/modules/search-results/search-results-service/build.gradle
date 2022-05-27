@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:search-results:search-results-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../search-results-api/src/main/java"
+}
+
+group = "com.liferay.training.amf.search.result"

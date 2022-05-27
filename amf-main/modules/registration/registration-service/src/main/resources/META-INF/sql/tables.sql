@@ -1,0 +1,21 @@
+create table Registration_Registration (
+	uuid_ VARCHAR(75) null,
+	userID LONG not null primary key,
+	groupId LONG,
+	firstname VARCHAR(75) null,
+	lastname VARCHAR(75) null,
+	email VARCHAR(75) null,
+	username VARCHAR(75) null,
+	password_ VARCHAR(75) null,
+	gender VARCHAR(75) null,
+	dob DATE null,
+	homephone VARCHAR(75) null,
+	mobilephone VARCHAR(75) null,
+	address1 VARCHAR(75) null,
+	address2 VARCHAR(75) null,
+	city VARCHAR(75) null,
+	state_ VARCHAR(75) null,
+	zipcode VARCHAR(75) null,
+	securityquestion VARCHAR(75) null,
+	answer VARCHAR(75) null
+);

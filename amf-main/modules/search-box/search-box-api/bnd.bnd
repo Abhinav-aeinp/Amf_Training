@@ -1,0 +1,14 @@
+Bundle-Name: search-box-api
+Bundle-SymbolicName: com.liferay.training.amf.search.box.api
+Bundle-Version: 1.0.0
+Export-Package: \
+	com.liferay.training.amf.search.box.exception,\
+	com.liferay.training.amf.search.box.model,\
+	com.liferay.training.amf.search.box.service,\
+	com.liferay.training.amf.search.box.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../search-box-service/service.xml
+-jsp: *.jsp,*.jspf
+-plugin.bundle: com.liferay.ant.bnd.resource.bundle.ResourceBundleLoaderAnalyzerPlugin
+-plugin.jsp: com.liferay.ant.bnd.jsp.JspAnalyzerPlugin
+-sources: true

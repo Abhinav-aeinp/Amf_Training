@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.liferay.training.amf.registration.model.Registration">
+		<field name="uuid" type="String" />
+		<field name="userID" type="long" />
+		<field name="groupId" type="long" />
+		<field name="firstname" type="String" />
+		<field name="lastname" type="String" />
+		<field name="email" type="String" />
+		<field name="username" type="String" />
+		<field name="password" type="String" />
+		<field name="gender" type="String" />
+		<field name="dob" type="Date" />
+		<field name="homephone" type="String" />
+		<field name="mobilephone" type="String" />
+		<field name="address1" type="String" />
+		<field name="address2" type="String" />
+		<field name="city" type="String" />
+		<field name="state" type="String" />
+		<field name="zipcode" type="String" />
+		<field name="securityquestion" type="String" />
+		<field name="answer" type="String" />
+	</model>
+</model-hints>

@@ -1,0 +1,11 @@
+dependencies {
+	compile project(":modules:search-box:search-box-api")
+
+	compileOnly group: "com.liferay.portal", name: "release.dxp.api"
+}
+
+buildService {
+	apiDir = "../search-box-api/src/main/java"
+}
+
+group = "com.liferay.training.amf.search.box"

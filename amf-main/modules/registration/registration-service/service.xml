@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.3.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_3_0.dtd">
+
+<service-builder dependency-injector="ds" package-path="com.liferay.training.amf.registration">
+	
+<namespace>Registration</namespace>
+	<!--<entity data-source="sampleDataSource" local-service="true" name="Foo" remote-service="false" session-factory="sampleSessionFactory" table="foo" tx-manager="sampleTransactionManager uuid="true"">-->
+	<entity local-service="true" name="Registration" remote-service="true" uuid="true">
+
+		<!-- PK fields -->
+
+		<column name="userID" primary="true" type="long" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+
+		<!-- Audit fields -->
+
+		<column name="firstname" type="String"></column>
+		<column name="lastname" type="String"></column>
+		<column name="email" type="String"></column>
+		<column name="username" type="String"></column>
+		<column name="password" type="String"></column>
+		<column name="gender" type="String"></column>
+		<column name="dob" type="Date"></column>
+		
+		<column name="homephone" type="String"></column>
+		<column name="mobilephone" type="String"></column>
+		
+		<column name="address1" type="String"></column>
+		<column name="address2" type="String"></column>
+		<column name="city" type="String"></column>
+		<column name="state" type="String"></column>
+		<column name="zipcode" type="String"></column>
+		
+		<column name="securityquestion" type="String"></column>
+		<column name="answer" type="String"></column>
+
+		<!-- References -->
+
+		<reference entity="AssetEntry" package-path="com.liferay.portlet.asset" />
+		<reference entity="AssetTag" package-path="com.liferay.portlet.asset" />
+		<reference entity="Phone" package-path="com.liferay.portal"/>
+		<reference entity="ListType" package-path="com.liferay.portal"/>
+		<reference entity="Address" package-path="com.liferay.portal"/>
+		<reference entity="Region" package-path="com.liferay.portal"/>
+	</entity>
+</service-builder>
